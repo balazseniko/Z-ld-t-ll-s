@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zöld átállás Európában — Vega-Lite Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Vega stack -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>Zöld átállás Európában (2010–2024)</h1>
+      <p>
+        Interaktív Vega-Lite dashboard: megújulók aránya, CO₂/fő, energiaárak és összefüggések.
+      </p>
+      <div class="badges">
+        <span class="badge">Vega-Lite</span>
+        <span class="badge">Interactive</span>
+        <span class="badge">GitHub Pages ready</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+      <article class="card">
+        <h2>1) Megújulók aránya időben</h2>
+        <p class="hint">Válassz országot a legördülőből.</p>
+        <div id="chartRenewablesLine" class="viz"></div>
+      </article>
+
+      <article class="card">
+        <h2>2) CO₂ vs Megújulók (szórás)</h2>
+        <p class="hint">Év csúszka + ország szűrés.</p>
+        <div id="chartScatter" class="viz"></div>
+      </article>
+
+      <article class="card">
+        <h2>3) Energiaár hőtérkép</h2>
+        <p class="hint">Hol drágult a legjobban?</p>
+        <div id="chartHeatmap" class="viz"></div>
+      </article>
+
+      <article class="card">
+        <h2>4) Top változások (2010 → 2024)</h2>
+        <p class="hint">Megújulók növekedése országonként.</p>
+        <div id="chartDeltaBars" class="viz"></div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Megjegyzés: a <code>data.csv</code> demonstrációs (plauzibilis) mintaadat.
+        Cseréld le valós adatra, és a vizuálok automatikusan frissülnek.
+      </p>
+    </footer>
+  </main>
+
+  <script src="charts.js"></script>
+</body>
+</html>
